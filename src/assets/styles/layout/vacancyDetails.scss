@@ -1,0 +1,138 @@
+@use "../main/vars";
+
+.vacancyDetails {
+  position: fixed;
+  z-index: 10;
+  min-width: 100vw;
+  min-height: 100vh;
+  max-width: 100%;
+  max-height: 100%;
+  height: 100%;
+  width: 100%;
+
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+
+  .overlay {
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    padding-top: 50px;
+
+
+    // display: flex;
+    // align-items: center;
+    // justify-content: center;
+
+    .wrapper {
+      background: url("../../images/vacancySection/vacancyDetailsBackground.svg")
+        no-repeat center / cover;
+      padding: 30px 40px;
+      margin: 0 auto;
+      width: 100%;
+      max-width: 770px;
+      position: absolute;
+      left: 50%;
+      top: 10%;
+      transform: translate(-50%, 0);
+      article {
+        margin-top: 20px;
+
+        .articleTitle,
+        span {
+          font-weight: 500;
+          font-size: 22px;
+          line-height: 27px;
+          color: vars.$white;
+        }
+
+        span {
+          display: inline-block;
+          color: vars.$lightBlue;
+          margin-bottom: 10px;
+        }
+
+        ul {
+          margin-top: 15px;
+          li {
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 30px;
+            color: vars.$grey;
+          }
+        }
+      }
+
+      .socials {
+        width: 100%;
+        margin-top: 10px;
+
+        h5 {
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 1px;
+          max-width: 165px;
+          width: 100%;
+
+          color: vars.$white;
+        }
+
+        ul {
+          display: flex;
+          margin-top: 15px;
+          max-width: 200px;
+          align-items: center;
+          justify-content: space-between;
+
+          li,
+          a {
+            width: 32px;
+            height: 32px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+          }
+
+          a {
+            border-radius: 10px;
+            border: 1px solid vars.$white;
+
+            &:hover {
+              scale: 1.1;
+            }
+          }
+        }
+      }
+
+      .tgBot {
+        width: 100%;
+        height: 100%;
+        max-width: 439px;
+        margin-top: 30px;
+        max-height: 92px;
+        padding: 20px 30px;
+        background: vars.$blueBtn;
+        border-radius: 10px;
+
+        font-weight: 400;
+        font-size: 18px;
+        line-height: 26px;
+        color: vars.$white;
+
+        p {
+          width: 100%;
+          max-width: 379px;
+          text-align: center;
+        }
+
+        a {
+          margin-left: 4px;
+        }
+      }
+    }
+  }
+}

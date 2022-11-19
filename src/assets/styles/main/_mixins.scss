@@ -1,0 +1,82 @@
+$xxl: 1400px;
+$xl: 1200px;
+$lg: 992px;
+$md: 768px;
+$sm: 576px;
+$xs: 320px;
+
+// custom width
+@mixin media($w) {
+  @media (max-width: $w) {
+    @content;
+  }
+}
+
+//  1400
+@mixin xxl {
+  @media(max-width: $xxl) {
+    @content;
+  }
+}
+
+// 1200
+@mixin xl {
+  @media(max-width: $xl) {
+    @content;
+  }
+}
+
+@mixin lg {
+  @media(max-width: $lg) {
+    @content;
+  }
+}
+
+@mixin md {
+  @media(max-width: $md) {
+    @content;
+  }
+}
+
+@mixin sm {
+  @media(max-width: $sm) {
+    @content;
+  }
+}
+
+@mixin xs {
+  @media(max-width: $xs) {
+    @content;
+  }
+}
+
+
+@include xxl {
+  .container {
+    max-width: $xl;
+  }
+}
+
+@include xl {
+  .container {
+    max-width: $lg;
+  }
+}
+
+@include lg {
+  .container {
+    max-width: $md;
+  }
+}
+
+@include md {
+  .container {
+    max-width: $sm;
+  }
+}
+
+@include sm {
+  .container {
+    max-width: 100%;
+  }
+}

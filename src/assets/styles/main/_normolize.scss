@@ -1,0 +1,97 @@
+@use "./vars";
+
+/* Chrome, Safari, Edge, Opera */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  appearance: none;
+  margin: 0;
+}
+
+/* Firefox */
+input[type="number"] {
+  appearance: textfield;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  transition: all 0.3s;
+}
+
+ul,
+ol,
+li {
+  list-style: none;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color: vars.$mainFontDark;
+  color: inherit;
+}
+
+input,
+textarea,
+select,
+option,
+progress,
+button {
+  outline: none;
+  color: vars.$mainFontDark;
+  font-family: "Montserrat";
+}
+
+textarea {
+  resize: none;
+}
+
+button {
+  cursor: pointer;
+}
+
+body {
+  font-family: "Montserrat";
+  font-weight: 400;
+  color: vars.$mainFontDark;
+  font-size: 16px;
+  background: vars.$white;
+}
+
+.container {
+  width: 100%;
+  max-width: calc(1440px + 30px);
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+.btnDiv {
+  width: 198px;
+  height: 50px;
+
+  button {
+    transition: 0.3s;
+
+    width: 100%;
+    height: 100%;
+    border: 1px transparent;
+    border-radius: 10px;
+    background: vars.$blueBtn;
+    color: vars.$white;
+
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  &:hover {
+    button {
+      background: transparent;
+      color: vars.$blueBtn;
+      border: 1px solid vars.$blueBtn;
+    }
+  }
+}

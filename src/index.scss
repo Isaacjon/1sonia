@@ -1,0 +1,89 @@
+@forward "./assets/styles/main/main.scss";
+
+body {
+  height: 100vh;
+}
+
+.main {
+  height: 100%;
+  // min-height: calc(100vh - (484px - 80px));
+  height: calc(100vh - 520px);
+}
+
+.app {
+  overflow: hidden;
+  display: flex;
+  background: #000;
+  // flex-direction: column;
+  // justify-content: space-between;
+}
+
+.helpme {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+
+  > img {
+    z-index: -1;
+    top: 0;
+    left: 50%;
+    transform: translateX(calc(200px + -50%));
+    position: absolute;
+    height: 100%;
+  }
+
+  img.z-index {
+    z-index: 1;
+    // transform: rotate(180deg);
+    // height: unset;
+    // transform: translateX(-32%);
+  }
+}
+
+.bgDiv {
+  background: url("./assets/images/departments/bg.svg") no-repeat center / cover;
+}
+
+.bgDiv.about {
+  // background: url("./assets/images/departments/bg.svg") no-repeat center / cover;
+  background-image: url("./assets/images/aboutSection/bg.svg");
+}
+.bgDiv.suggestions {
+  // background: url("./assets/images/departments/bg.svg") no-repeat center / cover;
+  background-image: url("./assets/images/suggestionsSection/bg.svg");
+}
+
+.help {
+  position: relative;
+  overflow: hidden;
+  // z-index: 50;
+  > img {
+    pointer-events: none;
+    object-position: center;
+    object-fit: scale-down;
+    // max-height: 100%;
+    position: absolute;
+    // top: 0;
+    // bottom: 0;
+    left: 50%;
+    transform: translateX(calc(70px + -50%)) translateY(-50px);
+    z-index: 0;
+  }
+}
+
+.vacancyBg {
+  background: url("./assets/images/vacancySection/vacancyBg.svg") no-repeat
+    center / cover;
+  position: relative;
+  overflow: hidden;
+  min-height: 100%;
+
+  > img {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-40%, 0);
+    pointer-events: none;
+    height: 100%;
+  }
+}

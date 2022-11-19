@@ -1,0 +1,178 @@
+@use "../main/vars";
+
+.introSection {
+  padding-top: 60px;
+  height: 100%;
+  
+  .wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 100%;
+    max-width: 100%;
+
+    .text-content {
+      width: 45%;
+      max-width: 506px;
+
+      h1 {
+        margin-bottom: 30px;
+        font-weight: 700;
+        font-size: 53px;
+        line-height: 70px;
+
+        span {
+          color: vars.$blueBtn;
+        }
+      }
+
+      p {
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 30px;
+        margin-bottom: 40px;
+
+        span {
+          color: vars.$blueBtn;
+          font-weight: 700;
+        }
+      }
+
+      .playButton {
+        transform: translateX(-25px);
+        margin-bottom: 20px;
+
+        display: flex;
+        align-items: center;
+
+        .btn {
+          height: 120px;
+          width: 120px;
+          border: none;
+          transition: 0.5s;
+          background: url("../../images/introSection/playbtn/Default.svg")
+            no-repeat center / cover;
+          animation: changeBg 0.7s infinite both;
+          &:hover {
+            scale: 1.1;
+          }
+        }
+      }
+
+      .download {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        max-width: 360px;
+
+        & > div {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          & > img:hover {
+            scale: 1.1;
+          }
+        }
+      }
+    }
+
+    .image-block {
+      width: 55%;
+
+      & > img {
+        // transform: translateY(5px);
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .arrowDown {
+      position: absolute;
+      bottom: 5%;
+      animation: arrow 0.8s infinite ease-out;
+      animation: myAnim 2s ease 0s infinite normal forwards;
+    }
+  }
+
+  @keyframes changeBg {
+    0% {
+      background: url("../../images/introSection/playbtn/Default.svg") no-repeat
+        center / cover;
+    }
+
+    25% {
+      background: url("../../images/introSection/playbtn/Variant2.svg")
+        no-repeat center / cover;
+    }
+    50% {
+      background: url("../../images/introSection/playbtn/Variant3.svg")
+        no-repeat center / cover;
+    }
+    75% {
+      background: url("../../images/introSection/playbtn/Variant4.svg")
+        no-repeat center / cover;
+    }
+    100% {
+      background: url("../../images/introSection/playbtn/Variant5.svg")
+        no-repeat center / cover;
+    }
+  }
+  @keyframes arrow {
+    from {
+      transform: translateY(1px);
+    }
+    90% {
+      transform: translateY(50px);
+    }
+    to {
+      transform: translateY(50px);
+    }
+  }
+
+  @keyframes myAnim {
+    0% {
+      animation-timing-function: ease-in;
+      opacity: 0;
+      transform: translateY(-150px);
+    }
+
+    38% {
+      animation-timing-function: ease-out;
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    55% {
+      animation-timing-function: ease-in;
+      transform: translateY(-65px);
+    }
+
+    72% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+
+    81% {
+      animation-timing-function: ease-in;
+      transform: translateY(-28px);
+    }
+
+    90% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+
+    95% {
+      animation-timing-function: ease-in;
+      transform: translateY(-8px);
+    }
+
+    100% {
+      animation-timing-function: ease-out;
+      transform: translateY(0);
+    }
+  }
+}

@@ -1,0 +1,44 @@
+@use "../main/vars";
+
+.stepsLine {
+  background: #f0f3f6;
+  padding: 30px 0 40px;
+  .wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: url("../../images/stepsLine/Group\ 644.svg") no-repeat center;
+    background-size: 85%;
+
+    .item {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      align-items: center;
+
+      span {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        background: #7f81d0;
+        border-radius: 100px;
+        width: 72px;
+        height: 72px;
+
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 30px;
+        color: vars.$white;
+      }
+
+      p {
+        font-weight: 600;
+        font-size: 18px;
+        line-height: 28px;
+
+        color: vars.$blueBtn;
+      }
+    }
+  }
+}

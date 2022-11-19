@@ -1,0 +1,142 @@
+@use "../main/vars";
+
+.aboutSection {
+  padding: 120px 0 150px;
+  position: relative;
+
+  >img:nth-child(1) {
+    position: absolute;
+    top: 5%;
+    left: 0%;
+  }
+ 
+  >img:nth-child(2) {
+    position: absolute;
+    bottom: 10%;
+    right: 0;
+  }
+  .sectionTitle {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 56px;
+    color: vars.$white;
+    margin-bottom: 90px;
+    text-align: center;
+
+    span {
+      color: vars.$lightBlue;
+    }
+  }
+
+  .wrapper {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+
+    .left {
+      position: relative;
+      padding: 27px 12px 0px;
+
+      > img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 1;
+      }
+
+      .img-block {
+        filter: drop-shadow(0px 2px 20px rgba(0, 0, 0, 0.11));
+        overflow: hidden;
+        width: 800px;
+        height: 450px;
+        border-radius: 20px;
+
+        img {
+          object-fit: cover;
+          width: 100%;
+          height: 100%;
+        }
+      }
+
+      .text {
+        background: url("../../images/aboutSection/frame.svg") no-repeat center /
+          cover;
+        box-shadow: 0px 6px 37px rgba(0, 0, 0, 0.6);
+        border-radius: 20px;
+        max-width: 690px;
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        width: 100%;
+        height: 86px;
+        transform: translate(-55%, 50%);
+
+        .relative {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          > img {
+            position: absolute;
+            top: 0;
+            right: 0;
+            transform: translate(10%, -40%);
+          }
+        }
+
+        p {
+          font-weight: 600;
+          font-size: 18px;
+          line-height: 22px;
+          letter-spacing: 0.01em;
+          color: vars.$white;
+          width: 100%;
+          max-width: 645px;
+
+          span {
+            color: vars.$lightBlue;
+          }
+        }
+      }
+    }
+
+    .right {
+      p {
+        width: 100%;
+        max-width: 511px;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 36px;
+        color: vars.$white;
+        margin-bottom: 40px;
+      }
+      .btnDiv {
+        button {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          gap: 10px;
+
+          img {
+            object-fit: cover;
+            width: 100%;
+            height: 100%;
+            max-width: 9px;
+            max-height: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+          }
+        }
+
+        &:hover {
+          button {
+            color: vars.$white;
+          }
+        }
+      }
+    }
+  }
+}
